@@ -9,6 +9,8 @@ public class Menu {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
 		
+		sobre();
+		
 		int opcao = -1;
 		
 		while(opcao != 0) {
@@ -71,7 +73,7 @@ public class Menu {
 				break;
 				
 			case 0:
-				System.out.println(Cores.TEXT_WHITE + "Volte sempre!" );
+				System.out.println(Cores.TEXT_WHITE + "Volte sempre!" + Cores.TEXT_BLACK);
 				break;
 				
 				default: 
@@ -84,11 +86,11 @@ public class Menu {
 	}
 	
 	public static void sobre() {
+		System.out.println("\n*********************************************************\n");
+		System.out.println("Projeto Desenvolvido por: Sara Hurtado\n");
+		System.out.println("Generation Brasil - sarac@genstudents.org\n");
+		System.out.printf("Repositorio no GitHub: \nhttps://github.com/SaraCarlenis/conta_bancaria_Generation\n");
 		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: Sara");
-		System.out.println("Generation Brasil - sarac@genstudents.org");
-		System.out.printf("Repositorio no GitHub: \nhttps://github.com/SaraCarlenis/conta_bancaria_Generation");
-		System.out.println("*********************************************************");
 	}
 
 }
