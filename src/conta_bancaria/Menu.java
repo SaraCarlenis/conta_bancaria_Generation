@@ -2,6 +2,7 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -12,6 +13,36 @@ public class Menu {
 		sobre();
 		
 		int opcao = -1;
+		
+		//Instanciar Objetos da Clsse Conta
+		
+		Conta c1 = new Conta(1, 123, 1, "Sara", 200000.00f);
+		c1.visualizar();
+		
+		Conta c2 = new Conta(5, 456, 2, "Lenys", 1500.00f);
+		c1.visualizar();
+		
+
+		System.out.println("\nSacar R$ 1.000,00 da conta C2: " + (c2.sacar(1000.00f) ?
+				"Saque efetuado com sucesso!" : "Saldo Insuficiente"));
+		
+		System.out.println("\nSacar R$ 500.000,00 da conta C2: " + (c2.sacar(1000.00f) ?
+				"Saque efetuado com sucesso!" : "Saldo Insuficiente"));
+		c2.visualizar();
+		c2.depositar(50000.00f);
+		c2.visualizar();
+		/**
+		 * if ternário
+		 * condição ? é como se fosse if
+		 * : açao se for verdadeoro
+		 * : açao se for falso
+		 */
+		
+		
+		
+		/*System.out.println(c1.getTitular());
+		System.out.println(c1.getSaldo());
+		System.out.println(c1.getTipo());*/
 		
 		while(opcao != 0) {
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + 
@@ -73,7 +104,7 @@ public class Menu {
 				break;
 				
 			case 0:
-				System.out.println(Cores.TEXT_WHITE + "Volte sempre!" + Cores.TEXT_BLACK);
+				System.out.println(Cores.TEXT_WHITE + "Volte sempre!");
 				break;
 				
 				default: 
