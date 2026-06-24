@@ -46,7 +46,7 @@ public class Conta {
 	}
 
 	public String getTitular() {
-		return titular;
+		return  titular;
 	}
 
 	public void setTitular(String titular) {
@@ -91,10 +91,10 @@ public class Conta {
 				break;
 		}
 		
-		System.out.printf("**************************************");
-		System.out.printf("		 DADOS DA CONTA		  ");
-		System.out.printf("**************************************");
-		System.out.printf("Número da conta: %d%n", this.numero);
+		System.out.printf("***************************\n");
+		System.out.printf("		 DADOS DA CONTA		  \n");
+		System.out.printf("***************************\n");
+		System.out.printf("Número da conta: %d%n", this.numero, "\n");
 		System.out.printf("Número da agência: %d%n", this.agencia);
 		System.out.printf("Tipo da conta: %s%n", tipo);
 		System.out.printf("Nome do titular: %s%n", this.titular);
