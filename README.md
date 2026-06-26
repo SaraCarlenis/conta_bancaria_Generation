@@ -382,7 +382,7 @@ Para executar os códigos localmente, você precisará de:
 
 
 
-git clone https://github.com/rafaelq80/conta\_bancaria.git
+git clone https://github.com/SaraCarlenis/conta\_bancaria.git
 
 
 
@@ -482,7 +482,7 @@ Este repositório é parte de um projeto educacional, mas contribuições são s
 
 &#x20;
 
-Desenvolvido por \[\*\*Rafael\*\*](https://github.com/rafaelq80)
+Desenvolvido por \[\*\*Sara\*\*](https://github.com/SaraCarlenis)
 
 
 
