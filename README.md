@@ -374,7 +374,7 @@ Para executar os códigos localmente, você precisará de:
 
 &#x20;
 
-1\. Clone o repositório do Projeto \[Conta Bancária](https://github.com/rafaelq80/conta\_bancaria) dentro da pasta do \*Workspace\* do Eclipse/STS
+1\. Clone o repositório do Projeto \[Conta Bancária](https://github.com/SaraCarlenis/conta\_bancaria) dentro da pasta do \*Workspace\* do Eclipse/STS
 
 &#x20;
 
