@@ -24,6 +24,7 @@ public class Menu {
 		criarContasTestes();
 		
 		while(opcao != 0) {
+<<<<<<< Updated upstream
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + 
 					"*****************************************************");
 			System.out.println("*****************************************************");
@@ -47,6 +48,31 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("                                                     " + Cores.TEXT_RESET);
 
+=======
+			
+			String fundoRosa = "\u001B[48;5;218m"; // rosa claro (fundo)
+            String textoBranco = "\u001B[97m";     // texto branco
+            String linhaLaranja = "\u001B[38;5;208m"; // laranja para linhas
+            String reset = "\u001B[0m"; 
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+            System.out.println(fundoRosa + textoBranco + "                    BANCO DO BRAZIL COM Z          " + reset);
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+		    System.out.println(fundoRosa + textoBranco + "  1 - Criar Conta                                  " + reset);
+            System.out.println(fundoRosa + textoBranco + "  2 - Listar todas as Contas                       " + reset);
+            System.out.println(fundoRosa + textoBranco + "  3 - Buscar Conta por Número                      " + reset);
+            System.out.println(fundoRosa + textoBranco + "  4 - Atualizar Dados da Conta                     " + reset);
+            System.out.println(fundoRosa + textoBranco + "  5 - Apagar Conta                                 " + reset);
+            System.out.println(fundoRosa + textoBranco + "  6 - Sacar                                        " + reset);
+            System.out.println(fundoRosa + textoBranco + "  7 - Depositar                                    " + reset);
+            System.out.println(fundoRosa + textoBranco + "  8 - Transferir valores entre Contas              " + reset);
+            System.out.println(fundoRosa + textoBranco + "  9 - Consulta por nome do titular                 " + reset);
+            System.out.println(fundoRosa + textoBranco + "  0 - Sair                                         " + reset);
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+            System.out.println(fundoRosa + textoBranco + "  Entre com a opção desejada:                      " + reset);
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+            System.out.print(reset);
+		    
+>>>>>>> Stashed changes
 			try {
 				opcao = leia.nextInt();
 				leia.nextLine();
@@ -110,7 +136,6 @@ public class Menu {
 				
 			case 0:
 				System.out.println(Cores.TEXT_WHITE + "Volte sempre!");
-				keyPress();
 				break;
 				
 				default: 
@@ -119,7 +144,7 @@ public class Menu {
 			}
 				
 		}
-		
+
 		leia.close();
 	}
 	
@@ -281,5 +306,53 @@ public class Menu {
 		} else {
 			System.out.printf("\nA conta número %d não foi encontrada!", numero);
 		}
+<<<<<<< Updated upstream
+=======
+	}
+		public static void sacar() {
+			
+			System.out.println("Digite o número da conta:");
+			int numero = leia.nextInt();
+			
+			System.out.println("O valor do saque: " );
+			float valor = leia.nextFloat();
+			
+			contaController.sacar(numero, valor);
+		}
+		
+		public static void depositar() {
+			
+			System.out.println("Digite o número da conta:");
+			int numero = leia.nextInt();
+			
+			System.out.println("Digite o valor do deposito: " );
+			float valor = leia.nextFloat();
+			leia.nextLine();
+			
+			contaController.depositar(numero, valor);
+		}
+		
+		public static void transferir() {
+			System.out.println("Digite o número da conta de origem:");
+			int numeroOrigem = leia.nextInt();
+			
+			System.out.println("Digite o número da conta de destino:");
+			int numeroDestino = leia.nextInt();
+			
+			System.out.println("Difgite o valor da transfêrencia: " );
+			float valor = leia.nextFloat();
+			leia.nextLine();
+			
+			contaController.transferir(numeroOrigem, numeroDestino, valor);
+		}
+		
+		public static void listarPorTitular() {
+			
+			System.out.println("Digite o nome do titular da conta: " );
+			String titular = leia.next();
+			
+			contaController.listarPorTitular(titular);
+			
+>>>>>>> Stashed changes
 		}
 }
