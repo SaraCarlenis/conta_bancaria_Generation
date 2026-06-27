@@ -24,30 +24,29 @@ public class Menu {
 		criarContasTestes();
 		
 		while(opcao != 0) {
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + 
-					"*****************************************************");
-			System.out.println("*****************************************************");
-			System.out.println("                                                     ");
-			System.out.println("                BANCO DO BRAZIL COM Z                ");
-			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
-			System.out.println("                                                     ");
-			System.out.println("            1 - Criar Conta                          ");
-			System.out.println("            2 - Listar todas as Contas               ");
-			System.out.println("            3 - Buscar Conta por Numero              ");
-			System.out.println("            4 - Atualizar Dados da Conta             ");
-			System.out.println("            5 - Apagar Conta                         ");
-			System.out.println("            6 - Sacar                                ");
-			System.out.println("            7 - Depositar                            ");
-			System.out.println("            8 - Transferir valores entre Contas      ");
-			System.out.println("            9 - Consulta por nome do titular         ");
-			System.out.println("            0 - Sair                                 ");
-			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
-			System.out.println("Entre com a opção desejada:                          ");
-			System.out.println("                                                     ");
-			System.out.println("                                                     " + Cores.TEXT_RESET);
-
+			
+			String fundoRosa = "\u001B[48;5;218m"; // rosa claro (fundo)
+            String textoBranco = "\u001B[97m";     // texto branco
+            String linhaLaranja = "\u001B[38;5;208m"; // laranja para linhas
+            String reset = "\u001B[0m"; 
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+            System.out.println(fundoRosa + textoBranco + "                    BANCO DO BRAZIL COM Z          " + reset);
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+		    System.out.println(fundoRosa + textoBranco + "  1 - Criar Conta                                  " + reset);
+            System.out.println(fundoRosa + textoBranco + "  2 - Listar todas as Contas                       " + reset);
+            System.out.println(fundoRosa + textoBranco + "  3 - Buscar Conta por Número                      " + reset);
+            System.out.println(fundoRosa + textoBranco + "  4 - Atualizar Dados da Conta                     " + reset);
+            System.out.println(fundoRosa + textoBranco + "  5 - Apagar Conta                                 " + reset);
+            System.out.println(fundoRosa + textoBranco + "  6 - Sacar                                        " + reset);
+            System.out.println(fundoRosa + textoBranco + "  7 - Depositar                                    " + reset);
+            System.out.println(fundoRosa + textoBranco + "  8 - Transferir valores entre Contas              " + reset);
+            System.out.println(fundoRosa + textoBranco + "  9 - Consulta por nome do titular                 " + reset);
+            System.out.println(fundoRosa + textoBranco + "  0 - Sair                                         " + reset);
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+            System.out.println(fundoRosa + textoBranco + "  Entre com a opção desejada:                      " + reset);
+            System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
+            System.out.print(reset);
+		    
 			try {
 				opcao = leia.nextInt();
 				leia.nextLine();
@@ -122,7 +121,7 @@ public class Menu {
 			}
 				
 		}
-		
+
 		leia.close();
 	}
 	
@@ -303,6 +302,7 @@ public class Menu {
 			
 			System.out.println("Digite o valor do deposito: " );
 			float valor = leia.nextFloat();
+			leia.nextLine();
 			
 			contaController.depositar(numero, valor);
 		}
@@ -316,6 +316,7 @@ public class Menu {
 			
 			System.out.println("Difgite o valor da transfêrencia: " );
 			float valor = leia.nextFloat();
+			leia.nextLine();
 			
 			contaController.transferir(numeroOrigem, numeroDestino, valor);
 		}
