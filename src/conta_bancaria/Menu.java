@@ -57,12 +57,6 @@ public class Menu {
 				leia.nextLine();
 			}
 			
-			if(opcao == 0) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu futuro começa aqui!");
-				sobre();
-				System.exit(0);
-			}
-			
 			switch(opcao) {
 			case 1 :
 				System.out.println("Criar conta!\n");
@@ -113,14 +107,13 @@ public class Menu {
 				break;
 				
 			case 9:
-				System.out.println(Cores.TEXT_WHITE + "Listar por titulas\n\n");
+				System.out.println(Cores.TEXT_WHITE + "Listar por titular\n\n");
 				listarPorTitular();
 				keyPress();
 				break;
 				
 			case 0:
 				System.out.println(Cores.TEXT_WHITE + "Volte sempre!");
-				keyPress();
 				break;
 				
 				default: 
@@ -156,7 +149,7 @@ public class Menu {
 	}
 
 	public static void cadastrarConta() {
-		System.out.println("Digite o número da conta: " );
+		System.out.println("Digite o número da agência: " );
 		int agencia = leia.nextInt();
 		
 		System.out.println("Digite o nome do titular da conta: " );
