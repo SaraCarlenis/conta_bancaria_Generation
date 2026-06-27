@@ -24,31 +24,6 @@ public class Menu {
 		criarContasTestes();
 		
 		while(opcao != 0) {
-<<<<<<< Updated upstream
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + 
-					"*****************************************************");
-			System.out.println("*****************************************************");
-			System.out.println("                                                     ");
-			System.out.println("                BANCO DO BRAZIL COM Z                ");
-			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
-			System.out.println("                                                     ");
-			System.out.println("            1 - Criar Conta                          ");
-			System.out.println("            2 - Listar todas as Contas               ");
-			System.out.println("            3 - Buscar Conta por Numero              ");
-			System.out.println("            4 - Atualizar Dados da Conta             ");
-			System.out.println("            5 - Apagar Conta                         ");
-			System.out.println("            6 - Sacar                                ");
-			System.out.println("            7 - Depositar                            ");
-			System.out.println("            8 - Transferir valores entre Contas      ");
-			System.out.println("            0 - Sair                                 ");
-			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
-			System.out.println("Entre com a opção desejada:                          ");
-			System.out.println("                                                     ");
-			System.out.println("                                                     " + Cores.TEXT_RESET);
-
-=======
 			
 			String fundoRosa = "\u001B[48;5;218m"; // rosa claro (fundo)
             String textoBranco = "\u001B[97m";     // texto branco
@@ -72,7 +47,6 @@ public class Menu {
             System.out.println(fundoRosa + linhaLaranja + "--------------------------------------------------" + reset);
             System.out.print(reset);
 		    
->>>>>>> Stashed changes
 			try {
 				opcao = leia.nextInt();
 				leia.nextLine();
@@ -80,12 +54,6 @@ public class Menu {
 				opcao = -1;
 				System.out.println("Digite um número entre 0 e 8");
 				leia.nextLine();
-			}
-			
-			if(opcao == 0) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu futuro começa aqui!");
-				sobre();
-				System.exit(0);
 			}
 			
 			switch(opcao) {
@@ -121,16 +89,25 @@ public class Menu {
 				
 			case 6:
 				System.out.println(Cores.TEXT_WHITE + "Sacar\n\n");
+				sacar();
 				keyPress();
 				break;
 				
 			case 7:
 				System.out.println(Cores.TEXT_WHITE + "Depositar\n\n");
+				depositar();
 				keyPress();
 				break;
 				
 			case 8:
 				System.out.println(Cores.TEXT_WHITE + "Transferir valores entre Contas");
+				transferir();
+				keyPress();
+				break;
+				
+			case 9:
+				System.out.println(Cores.TEXT_WHITE + "Listar por titular\n\n");
+				listarPorTitular();
 				keyPress();
 				break;
 				
@@ -171,7 +148,7 @@ public class Menu {
 	}
 
 	public static void cadastrarConta() {
-		System.out.println("Digite o número da conta: " );
+		System.out.println("Digite o número da agência: " );
 		int agencia = leia.nextInt();
 		
 		System.out.println("Digite o nome do titular da conta: " );
@@ -306,8 +283,6 @@ public class Menu {
 		} else {
 			System.out.printf("\nA conta número %d não foi encontrada!", numero);
 		}
-<<<<<<< Updated upstream
-=======
 	}
 		public static void sacar() {
 			
@@ -353,6 +328,5 @@ public class Menu {
 			
 			contaController.listarPorTitular(titular);
 			
->>>>>>> Stashed changes
 		}
 }
